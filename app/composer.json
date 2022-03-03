@@ -1,0 +1,21 @@
+{
+    "name": "lucas/framework",
+    "description": "Framework PHP simples baseado em MVC",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Celestino",
+            "email": "lucascap899@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twig/twig": "2.0",
+        "slim/slim": "2.0",
+        "phpmailer/phpmailer": "6.5.1"
+    }
+}
