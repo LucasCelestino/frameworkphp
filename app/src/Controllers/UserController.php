@@ -6,7 +6,7 @@ class UserController extends Controller
 {
     /* 
     GET
-    Show a list of the resource
+    Exibe uma lista do recurso
     */ 
     public function index()
     {
@@ -16,7 +16,7 @@ class UserController extends Controller
 
     /*
      GET
-     Show a form to create new resource
+     Exibe um form para criar um novo recurso
     */ 
     public function create()
     {
@@ -25,7 +25,7 @@ class UserController extends Controller
 
     /*
     POST
-    Store a newly created resource in database
+    Armazena um novo recurso criado no banco de dados
     */ 
     public function store()
     {
@@ -34,7 +34,7 @@ class UserController extends Controller
 
     /*
      GET
-     Show one resource
+     Exibe um recurso
     */  
     public function show(int $id)
     {
@@ -43,7 +43,7 @@ class UserController extends Controller
 
     /*
     GET
-    Show a form to edit one resource
+    Exibe um form para editar um recurso
     */ 
     public function edit(int $id)
     {
@@ -52,7 +52,7 @@ class UserController extends Controller
 
     /*
     PUT/PATCH
-    Update the specified resource in database
+    Atualiza um recurso especifico no banco de dados
     */ 
     public function update()
     {
@@ -60,9 +60,9 @@ class UserController extends Controller
     }
     /*
     DELETE
-    Delete the specified resource from database
+    Exclui um recurso especifico no banco de dados
     */ 
-    public function destroy()
+    public function destroy(int $id)
     {
         
     }

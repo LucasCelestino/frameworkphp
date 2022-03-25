@@ -8,14 +8,28 @@ use MiladRahimi\PhpRouter\Router;
 use MiladRahimi\PhpRouter\Exceptions\RouteNotFoundException;
 use Laminas\Diactoros\Response\HtmlResponse;
 
-use App\Controllers\HomeController;
+use App\Controllers\UserController;
 
 $router = Router::create();
 
 
-$router->get('/user', [HomeController::class, 'index']);
+// Exibe todos os usuarios
+$router->get('/users', [UserController::class, 'index']);
 
-$router->post('/cadastro', [HomeController::class, 'cadastroPost']);
+// Cadastra um novo usuário
+$router->get('/users/cadastro', [UserController::class, 'create']);
+$router->post('/users/cadastro', [UserController::class, 'store']);
+
+// Exibe um usuário especifico
+$router->get('/users/{id}', [UserController::class, 'show']);
+
+// Edita um usuário especifico
+$router->get('/users/editar/{id}', [UserController::class, 'edit']);
+$router->put('/users/editar', [UserController::class, 'update']);
+
+// Deleta um usuário especifico
+$router->post('/users/delete/{id}', [UserController::class, 'destroy']);
+
 
 try {
     $router->dispatch();
